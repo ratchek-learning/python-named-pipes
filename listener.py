@@ -9,7 +9,7 @@ except FileExistsError:
 
 def start_server():
     while True:
-        with open(my_pipe) as pipe:
+        with open(my_pipe, "r") as pipe:
             for line in pipe:
                 if line == "goodbye\n":
                     return
